@@ -1,0 +1,14 @@
+.banner {
+    @include verticalCenter;
+    border-radius: 25px;
+    
+    height: 230px;
+filter: brightness(50%);
+   
+    background: url(../../assets/img/main.png) center/cover;
+    h1{
+        color: $white;
+       
+    }
+
+}
