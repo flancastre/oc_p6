@@ -1,0 +1,47 @@
+.house-container {
+    padding: 50px;
+    background-color: #F7F7F7;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .house-link {
+            text-decoration: none;
+            color: $white;
+
+            card{
+                position: relative;
+                display: block;
+                height: 350px;
+                width: 350px;
+                background: red;
+                margin: 10px;
+                border-radius: 10px;
+                &:hover {
+                    // opacity: 0.8;
+
+                    & img {
+                        filter:brightness(80%)
+                    }
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    filter: brightness(50%);
+                
+                }
+
+                h2{
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                   
+                }
+            }
+        }
+    }
+}

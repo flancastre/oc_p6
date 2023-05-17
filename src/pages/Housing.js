@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Navigations from "../components/Navigations";
+import Footer from "../components/Footer";
 
 const Housing = () => {
   const { idH } = useParams();
@@ -24,6 +25,7 @@ const Housing = () => {
           ))}
         {idH}
       </ul>
+      <Footer />
     </div>
   );
 };

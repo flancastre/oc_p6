@@ -1,6 +1,7 @@
 import React from "react";
 import Navigations from "../components/Navigations";
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 
 const About = () => {
   return (
@@ -8,6 +9,7 @@ const About = () => {
       <Navigations />
       <Banner img="./img/about.png" alt="image d'une montagne" text="" />
       <h1>a propos</h1>
+      <Footer />
     </div>
   );
 };

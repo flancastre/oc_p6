@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navigations from "../components/Navigations";
 import Banner from "../components/Banner";
 import { NavLink } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -20,14 +21,21 @@ const Home = () => {
         alt="Image d'une falaise"
         text="Chez vous, partout et ailleurs"
       />
-      <ul>
-        {data.map((house) => (
-          <NavLink to={`/housing/${house.id}`}>
-            <li key={house.id}>{house.title}</li>
-          </NavLink>
-        ))}
-      </ul>
-      <h1>Bienvenue sur la page acceuil</h1>
+      <div className="house-container">
+        <ul>
+          {data.map((house) => (
+            <NavLink className="house-link" to={`/housing/${house.id}`}>
+              <li key={house.id}>
+                <card>
+                  <img src={house.cover} alt="" />
+                  <h2>{house.title}</h2>
+                </card>
+              </li>
+            </NavLink>
+          ))}
+        </ul>
+      </div>
+      <Footer />
     </div>
   );
 };
