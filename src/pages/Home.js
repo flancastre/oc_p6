@@ -11,6 +11,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
+
   return (
     <div>
       <Navigations />
@@ -20,8 +21,8 @@ const Home = () => {
         text="Chez vous, partout et ailleurs"
       />
       <ul>
-        {data.slice(0, 1).map((house) => (
-          <NavLink to="/housing/c67ab8a7">
+        {data.map((house) => (
+          <NavLink to={`/housing/${house.id}`}>
             <li key={house.id}>{house.title}</li>
           </NavLink>
         ))}
