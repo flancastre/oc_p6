@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom";
 const Navigations = () => {
   return (
     <div className="navigation">
-      <img src="./logo.png" alt="logo kasa" />
+      <img src="./img/logo.png" alt="logo kasa" />
       <ul>
         <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-          <li>Aceuil</li>
+          <li>Acceuil</li>
         </NavLink>
         <NavLink
           to="/about"

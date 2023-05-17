@@ -1,17 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navigations from "../components/Navigations";
 import Banner from "../components/Banner";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
-  // useEffect(() => {
-  //   fetch("../src/assets/db.json")
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // });
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("./db.json")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
   return (
     <div>
       <Navigations />
-      <Banner />
+      <Banner
+        img="./img/main.png"
+        alt="Image d'une falaise"
+        text="Chez vous, partout et ailleurs"
+      />
+      <ul>
+        {data.slice(0, 1).map((house) => (
+          <NavLink to="/housing/c67ab8a7">
+            <li key={house.id}>{house.title}</li>
+          </NavLink>
+        ))}
+      </ul>
       <h1>Bienvenue sur la page acceuil</h1>
     </div>
   );
