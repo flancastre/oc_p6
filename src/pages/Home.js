@@ -26,10 +26,10 @@ const Home = () => {
           {data.map((house) => (
             <NavLink className="house-link" to={`/housing/${house.id}`}>
               <li key={house.id}>
-                <card>
+                <div>
                   <img src={house.cover} alt="" />
                   <h2>{house.title}</h2>
-                </card>
+                </div>
               </li>
             </NavLink>
           ))}
