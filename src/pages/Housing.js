@@ -15,7 +15,7 @@ const Housing = () => {
 
   return (
     <div>
-      <Navigations />
+      <Navigations img={1} />
       <h1>Logement</h1>
       <ul>
         {data
@@ -25,7 +25,7 @@ const Housing = () => {
           ))}
         {idH}
       </ul>
-      <Footer />
+      <Footer img={1} />
     </div>
   );
 };
