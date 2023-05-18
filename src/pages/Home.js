@@ -24,8 +24,12 @@ const Home = () => {
       <div className="house-container">
         <ul>
           {data.map((house) => (
-            <NavLink className="house-link" to={`/housing/${house.id}`}>
-              <li key={house.id}>
+            <NavLink
+              key={house.id}
+              className="house-link"
+              to={`/housing/${house.id}`}
+            >
+              <li>
                 <div>
                   <img src={house.cover} alt="" />
                   <h2>{house.title}</h2>

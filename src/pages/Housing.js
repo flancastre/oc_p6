@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Navigations from "../components/Navigations";
 import Footer from "../components/Footer";
+// import Carrousel from "../components/Carrousel";
 
 const Housing = () => {
   const { idH } = useParams();
@@ -10,7 +11,9 @@ const Housing = () => {
   useEffect(() => {
     fetch("../db.json")
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => {
+        setData(data);
+      });
   }, []);
 
   return (
@@ -21,7 +24,9 @@ const Housing = () => {
         {data
           .filter((stay) => stay.id === idH)
           .map((stay, index) => (
-            <li key={index}>{stay.title}</li>
+            <li key={index}>
+              <p>{stay.title}</p>
+            </li>
           ))}
         {idH}
       </ul>
