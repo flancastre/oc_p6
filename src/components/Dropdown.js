@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Dropdown = ({ title, content }) => {
+const Dropdown = ({ title, content, test }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const dropOpen = () => {
@@ -30,7 +30,14 @@ const Dropdown = ({ title, content }) => {
           />
         )}
       </div>
-      <div>{isOpen && <p>{content}</p>}</div>
+      <div className={isOpen ? "drop-content" : "drop-content-close"}>
+        {isOpen &&
+          (test ? (
+            <p>{content}</p>
+          ) : (
+            content.map((object, index) => <li key={index}>{object}</li>)
+          ))}
+      </div>
     </div>
   );
 };

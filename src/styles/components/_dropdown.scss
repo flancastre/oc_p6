@@ -2,29 +2,40 @@
 
     width: 100%;
     margin: 10px;
-    
     .dropdown-container {
         display: flex;
         width: 100%;
         justify-content: space-between;
         color: $white;
         background: $color-1;
-
- padding: 10px;
- border-radius: 10px;
- 
- 
- img{
-     place-self: center;
-     
-     
+        
+        padding: 10px;
+        border-radius: 10px;
+        
+        
+        img{
+            place-self: center;
+            
+            
+        }
+        
+        
     }
     
-    
+    .drop-content {
+        background: #F7F7F7;
+        line-height: 1.8rem;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+      opacity: 1;
+      transition: 0.3s;
 }
 
-.drop-content {
-    background: #F7F7F7;
+.drop-content-close {
+   
+  opacity: 0;
+  transition: 0.3s;
+
 }
 
 }

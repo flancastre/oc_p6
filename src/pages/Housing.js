@@ -55,7 +55,11 @@ const Housing = () => {
                 </div>
               </div>
               <div className="carrousel-main">
-                <Dropdown title="Description" content={stay.description} />
+                <Dropdown
+                  title="Description"
+                  content={stay.description}
+                  test="1"
+                />
                 <Dropdown title="Equipement" content={stay.equipments} />
               </div>
             </div>
