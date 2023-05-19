@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Carrousel from "../components/Carrousel";
 import Tags from "../components/Tags";
 import Rating from "../components/Rating";
+import Dropdown from "../components/Dropdown";
 
 const Housing = () => {
   const { idH } = useParams();
@@ -52,6 +53,10 @@ const Housing = () => {
                     <Rating value={rate} />
                   </ul>
                 </div>
+              </div>
+              <div className="carrousel-main">
+                <Dropdown title="Description" content={stay.description} />
+                <Dropdown title="Equipement" content={stay.equipments} />
               </div>
             </div>
           ))}
