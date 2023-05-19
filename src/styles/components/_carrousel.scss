@@ -1,0 +1,45 @@
+.carrousel-container {
+    height: 500px;
+    position: relative;
+    border-radius: 25px;
+    margin: 20px 0;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    .prev-btn {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .next-btn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .p-carrousel {
+        position: absolute;
+        right: 50%;
+        bottom: 10px;
+        color: $white;
+
+    }
+
+}

@@ -16,14 +16,18 @@ const Carrousel = ({ pictures }) => {
   };
 
   return (
-    <div>
+    <div className="carrousel-container">
       <img src={pictures[currentIndex]} alt="" />
-      <button onClick={previousImage}>Previous</button>
-      <button onClick={nextImage}>Next</button>
+      <button className="prev-btn" onClick={previousImage}>
+        <img src="../img/arrow-left.png" alt="" />
+      </button>
+      <button className="next-btn" onClick={nextImage}>
+        <img src="../img/arrow-right.png" alt="" />
+      </button>
 
       {pictures.length > 1 && (
-        <p>
-          Image {currentIndex + 1} of {pictures.length}
+        <p className="p-carrousel">
+          {currentIndex + 1} / {pictures.length}
         </p>
       )}
     </div>

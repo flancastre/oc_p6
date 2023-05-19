@@ -3,11 +3,14 @@ import React, { useEffect, useState } from "react";
 import Navigations from "../components/Navigations";
 import Footer from "../components/Footer";
 import Carrousel from "../components/Carrousel";
+import Tags from "../components/Tags";
+import Rating from "../components/Rating";
 
 const Housing = () => {
   const { idH } = useParams();
   const [data, setData] = useState([]);
   const [filteredPictures, setFilteredPictures] = useState([]);
+  const [rate, setRates] = useState("");
 
   useEffect(() => {
     fetch("../db.json")
@@ -21,23 +24,38 @@ const Housing = () => {
     const filteredData = data.filter((stay) => stay.id === idH);
     if (filteredData.length > 0) {
       setFilteredPictures(filteredData[0].pictures);
+      setRates(filteredData[0].rating);
     }
   }, [data, idH]);
 
   return (
     <div>
       <Navigations img={1} />
-      <h1>Logement</h1>
-      <ul>
+      <div>
         {data
           .filter((stay) => stay.id === idH)
           .map((stay, index) => (
-            <li key={index}>
-              <p>{stay.title}</p>
+            <div key={index}>
               <Carrousel pictures={filteredPictures} />
-            </li>
+              <div className="carrousel-content">
+                <div className="carrousel-content-left">
+                  <h2>{stay.title}</h2>
+                  <p>{stay.location}</p>
+                  <Tags tags={stay.tags} />
+                </div>
+                <div className="carrousel-content-right">
+                  <div className="carrousel-content-right-top">
+                    <p>{stay.host.name}</p>
+                    <img src={stay.host.picture} alt="" />
+                  </div>
+                  <ul>
+                    <Rating value={rate} />
+                  </ul>
+                </div>
+              </div>
+            </div>
           ))}
-      </ul>
+      </div>
       <Footer img={1} />
     </div>
   );

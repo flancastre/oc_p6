@@ -1,0 +1,30 @@
+
+
+.carrousel-content {
+    display: flex;
+    justify-content: space-between;
+    p{
+        margin-top: 10px;
+    }
+
+    .carrousel-content-right{
+        ul {
+            margin-top: 20px;
+        }
+
+        .carrousel-content-right-top{
+            display: flex;
+            align-items: center;
+            
+            img {
+                border-radius: 50%;
+                height: 60px;
+                width: 60px;
+                margin: 0 0 0 5px;
+                object-fit: cover;
+            }
+        }
+        
+    }
+}
+
