@@ -2,9 +2,7 @@
 
     width: 100%;
     margin: 10px;
-    &--about{
-      margin: 15px 0 15px 0 ;
-      padding: 0 50px 0 50px;
+   
       .dropdown-container {
         display: flex;
         width: 100%;
@@ -41,5 +39,48 @@
         
       }
       
+    
     }
-    }
+
+    .drop--about{
+      margin: 10px 0 10px 0;
+      padding: 0 50px 0 50px;
+     
+        .dropdown-container {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          color: $white;
+          background: $color-1;
+          
+          padding: 10px;
+          border-radius: 10px;
+          
+          
+          img{
+            place-self: center;
+            
+            
+          }
+          
+          
+        }
+        
+        .drop-content {
+          background: #F7F7F7;
+          line-height: 1.8rem;
+          padding: 10px;
+          border-radius: 0 0 10px 10px;
+          opacity: 1;
+          transition: 0.3s;
+        }
+        
+        .drop-content-close {
+          
+          opacity: 0;
+          transition: 0.3s;
+          
+        }
+        
+      
+      }

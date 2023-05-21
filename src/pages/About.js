@@ -23,7 +23,7 @@ const About = () => {
             title={infos.title}
             content={infos.content}
             test="1"
-            styles="drop--about"
+            styles="1"
           />
         ))}
       </div>

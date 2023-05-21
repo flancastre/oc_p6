@@ -12,7 +12,7 @@ const Dropdown = ({ title, content, test, styles }) => {
   };
 
   return (
-    <div className={styles ? styles : "drop"}>
+    <div className={styles ? "drop--about" : "drop"}>
       <div
         className="dropdown-container"
         onClick={() => {
