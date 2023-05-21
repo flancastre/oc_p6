@@ -18,8 +18,9 @@ const About = () => {
       <Navigations />
       <Banner img="./img/about.png" alt="image d'une montagne" text="" />
       <div>
-        {dataInfo.map((infos) => (
+        {dataInfo.map((infos, index) => (
           <Dropdown
+            key={index}
             title={infos.title}
             content={infos.content}
             test="1"

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Navigations from "../components/Navigations";
 import Footer from "../components/Footer";
@@ -12,6 +12,7 @@ const Housing = () => {
   const [data, setData] = useState([]);
   const [filteredPictures, setFilteredPictures] = useState([]);
   const [rate, setRates] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("../db.json")
@@ -27,7 +28,10 @@ const Housing = () => {
       setFilteredPictures(filteredData[0].pictures);
       setRates(filteredData[0].rating);
     }
-  }, [data, idH]);
+    // if (filteredData.id !== idH) {
+    //   navigate("/error");
+    // }
+  }, [data, idH, navigate]);
 
   return (
     <div>
