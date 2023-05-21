@@ -18,11 +18,17 @@ const Carrousel = ({ pictures }) => {
   return (
     <div className="carrousel-container">
       <img src={pictures[currentIndex]} alt="" />
-      <button className="prev-btn" onClick={previousImage}>
-        <img src="../img/arrow-left.png" alt="" />
+      <button
+        className={pictures.length > 1 ? "prev-btn" : "btn-none"}
+        onClick={previousImage}
+      >
+        <img src="../img/arrow-left.png" alt="arrow left" />
       </button>
-      <button className="next-btn" onClick={nextImage}>
-        <img src="../img/arrow-right.png" alt="" />
+      <button
+        className={pictures.length > 1 ? "next-btn" : "btn-none"}
+        onClick={nextImage}
+      >
+        <img src="../img/arrow-right.png" alt="arrow right" />
       </button>
 
       {pictures.length > 1 && (

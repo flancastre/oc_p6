@@ -8,6 +8,7 @@
         height: 100%;
         object-fit: cover;
         border-radius: 25px;
+
     }
 
     .prev-btn {
@@ -20,6 +21,9 @@
         &:hover {
             opacity: 0.5;
         }
+    }
+    .btn-none {
+        display: none;
     }
 
     .next-btn {

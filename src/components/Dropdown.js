@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Dropdown = ({ title, content, test }) => {
+const Dropdown = ({ title, content, test, styles }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const dropOpen = () => {
@@ -12,8 +12,13 @@ const Dropdown = ({ title, content, test }) => {
   };
 
   return (
-    <div className="drop">
-      <div className="dropdown-container">
+    <div className={styles ? styles : "drop"}>
+      <div
+        className="dropdown-container"
+        onClick={() => {
+          isOpen ? dropOpen() : dropClose();
+        }}
+      >
         <h3>{title}</h3>
 
         {isOpen ? (
