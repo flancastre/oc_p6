@@ -2,6 +2,9 @@
 
     width: 100%;
     margin: 10px;
+    @include xs {
+      margin: 10px 0 10px 0;
+    }
    
       .dropdown-container {
         display: flex;
@@ -12,10 +15,20 @@
         
         padding: 10px;
         border-radius: 10px;
+
+        h3 {
+          @include xs {
+            font-size: 14px;
+          }
+        }
         
         
         img{
           place-self: center;
+
+          @include xs {
+            height: 10px;
+          }
           
           
         }
@@ -30,6 +43,18 @@
         border-radius: 0 0 10px 10px;
         opacity: 1;
         transition: 0.3s;
+
+        p {
+          @include xs {
+            font-size: 12px;
+          }
+        }
+
+        li {
+          @include xs {
+            font-size: 12px;
+          }
+        }
       }
       
       .drop-content-close {
@@ -45,6 +70,10 @@
     .drop--about{
       margin: 10px 0 10px 0;
       padding: 0 50px 0 50px;
+
+      @include xs {
+        padding: 0 10px 0 10px;
+      }
      
         .dropdown-container {
           display: flex;
@@ -56,10 +85,17 @@
           padding: 10px;
           border-radius: 10px;
           
+          h3 {
+            @include xs {
+              font-size: 14px;
+            }
+          }
           
           img{
             place-self: center;
-            
+            @include xs {
+              height: 10px;
+            }
             
           }
           
@@ -73,6 +109,11 @@
           border-radius: 0 0 10px 10px;
           opacity: 1;
           transition: 0.3s;
+          p{
+            @include xs {
+              font-size: 12px;
+            }
+          }
         }
         
         .drop-content-close {

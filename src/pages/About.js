@@ -17,13 +17,12 @@ const About = () => {
     <div>
       <Navigations />
       <Banner img="./img/about.png" alt="image d'une montagne" text="" />
-      <div>
+      <div className="about-container">
         {dataInfo.map((infos, index) => (
           <Dropdown
             key={index}
             title={infos.title}
             content={infos.content}
-            test="1"
             styles="1"
           />
         ))}

@@ -3,25 +3,83 @@
 .carrousel-content {
     display: flex;
     justify-content: space-between;
-    p{
-        margin-top: 10px;
+    margin: 0 10px 0 10px;
+    @include xs {
+        flex-direction: column;
+    }
+
+    .carrousel-content-left {
+        @include xs {
+            margin: 0 10px 0 10px;
+        }
+        h2 {
+            @include xs {
+                font-size: 18px;
+            }
+        }
+        p{
+            margin-top: 10px;
+            @include xs {
+                font-size: 14px;
+            }
+        }
+        .tags-container {
+
+            
+            
+            li {
+                @include xs {
+                    height: 15px;
+                    font-size:  10px;
+                    padding: 10px;
+                  
+
+                }
+            }
+        }
+            
     }
 
     .carrousel-content-right{
+        @include xs {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            margin: 0 10px 0 10px ;
+        }
         ul {
             margin-top: 20px;
+         @include xs {
+            align-self: center;
+            margin-top: 0;
+         }
+
+            img {
+                @include xs {
+                    height: 13px ;
+                    width: 13px;
+                }
+            }
         }
 
         .carrousel-content-right-top{
             display: flex;
             align-items: center;
-            
+            p {
+                @include xs {
+                    font-size: 12px;
+                }
+            }
             img {
                 border-radius: 50%;
                 height: 60px;
                 width: 60px;
                 margin: 0 0 0 5px;
                 object-fit: cover;
+                @include xs {
+                    height: 32px;
+                    width: 32px;
+                }
             }
         }
         
@@ -31,5 +89,11 @@
 .carrousel-main {
    display: flex;
  justify-content: space-between;
+
+ @include xs {
+    flex-direction: column;
+    padding: 0 10px 0 10px ;
+ }
+ 
 
 }

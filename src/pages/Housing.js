@@ -19,19 +19,20 @@ const Housing = () => {
       .then((res) => res.json())
       .then((data) => {
         setData(data);
+        const filteredData = data.filter((stay) => stay.id === idH);
+        if (filteredData.length > 0) {
+          const myid = filteredData[0].id;
+          setFilteredPictures(filteredData[0].pictures);
+          setRates(filteredData[0].rating);
+          console.log(filteredData);
+          if (myid !== idH) {
+            navigate("/error");
+          }
+        } else {
+          navigate("/error");
+        }
       });
-  }, []);
-
-  useEffect(() => {
-    const filteredData = data.filter((stay) => stay.id === idH);
-    if (filteredData.length > 0) {
-      setFilteredPictures(filteredData[0].pictures);
-      setRates(filteredData[0].rating);
-    }
-    // if (filteredData.id !== idH) {
-    //   navigate("/error");
-    // }
-  }, [data, idH, navigate]);
+  }, [idH, navigate]);
 
   return (
     <div>
@@ -59,11 +60,7 @@ const Housing = () => {
                 </div>
               </div>
               <div className="carrousel-main">
-                <Dropdown
-                  title="Description"
-                  content={stay.description}
-                  test="1"
-                />
+                <Dropdown title="Description" content={stay.description} />
                 <Dropdown title="Equipement" content={stay.equipments} />
               </div>
             </div>

@@ -2,22 +2,44 @@
     display: grid;
     grid-template-columns: auto auto;
     padding: 10px;
+    @include xs {
+      padding: 5pxh;
+    }
+
+    img{
+      @include xs {
+        width: 145px;
+      }
+    }
     
     ul {
        display: flex;
     justify-content: flex-end;
-     
        place-items: center center;
 
+       @include xs {
+        justify-content: space-around;
+        
+        
+       }
         a {
             text-decoration: none;
             padding: 10px;
+            @include xs {
+              padding: 0;
+            }
         }
 
         li{
             color: $color-1;
             transition: 0.2s;
             cursor: pointer;
+            @include xs {
+              text-transform: uppercase;
+              width: 100%;
+              font-size: 12px;
+              // height: 15px;h
+            }
             &:hover {
                 color: $color-2;
             }          

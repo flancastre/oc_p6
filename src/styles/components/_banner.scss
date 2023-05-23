@@ -3,7 +3,13 @@
     border-radius: 25px;
     position: relative;   
     height: 230px;
-    margin-bottom: 20px;
+    margin: 50px 10px 50px 10px; 
+
+    @include xs {
+        margin: 10px;
+        height: 115px;
+        justify-content: start;
+    }
 .img-banner{
     position: absolute;
     width: 100%;
@@ -16,6 +22,11 @@
 }
     h1{
         color: $white;
+        @include xs {
+            font-size: 24px;
+            width: 217px;
+            margin-left: 15px;
+        }
     
     }
 

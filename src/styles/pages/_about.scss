@@ -1,0 +1,5 @@
+.about-container {
+    @include xs {
+        min-height: calc(  100vh - (163px + 66.72px + 135px));
+    }
+}

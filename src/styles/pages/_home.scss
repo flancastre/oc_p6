@@ -1,6 +1,13 @@
 .house-container {
     padding: 50px;
     background-color: #F7F7F7;
+    margin: 0 10px 0 10px;
+    border-radius: 25px;
+
+    @include xs {
+        padding: 0 10px 0 10px;
+        margin: 5px;
+    }
 
     ul {
         display: flex;
@@ -14,11 +21,15 @@
             div {
                 position: relative;
                 display: block;
-                height: 350px;
-                width: 350px;
+                height: 320px;
+                width: 320px;
                 background: red;
                 margin: 10px;
                 border-radius: 10px;
+                @include xs {
+                    height: 325px;
+                    width: 325pxv;
+                }
                 &:hover {
                     // opacity: 0.8;
 
