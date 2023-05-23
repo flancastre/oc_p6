@@ -34,11 +34,14 @@
             color: $color-1;
             transition: 0.2s;
             cursor: pointer;
+            @include sm {
+              height: 15px;
+
+            }
             @include xs {
               text-transform: uppercase;
               width: 100%;
               font-size: 12px;
-              // height: 15px;h
             }
             @include xxs {
               font-size: 10px;
@@ -63,6 +66,9 @@
               transform: translateX(-50%);
               -webkit-animation: anim 0.3s ease forwards;
               animation: anim 0.6s ease forwards;
+              @include xs {
+                height: 1px;
+              }
       
               @-webkit-keyframes anim {
                 to {
