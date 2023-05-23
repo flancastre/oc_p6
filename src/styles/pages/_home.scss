@@ -1,7 +1,7 @@
 .house-container {
     padding: 50px;
     background-color: #F7F7F7;
-    margin: 0 10px 0 10px;
+    margin: 0 20px 0 20px;
     border-radius: 25px;
 
     @include xs {
@@ -28,7 +28,11 @@
                 border-radius: 10px;
                 @include xs {
                     height: 325px;
-                    width: 325pxv;
+                    width: 325px;
+                }
+                @include xxs {
+                    height: 250px;
+                    width: 250px;
                 }
                 &:hover {
                     // opacity: 0.8;

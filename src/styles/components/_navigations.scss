@@ -1,9 +1,9 @@
 .navigation {
     display: grid;
     grid-template-columns: auto auto;
-    padding: 10px;
+    padding: 20px;
     @include xs {
-      padding: 5pxh;
+      padding: 5px;
     }
 
     img{
@@ -39,6 +39,9 @@
               width: 100%;
               font-size: 12px;
               // height: 15px;h
+            }
+            @include xxs {
+              font-size: 10px;
             }
             &:hover {
                 color: $color-2;

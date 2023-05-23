@@ -8,15 +8,23 @@
     
 
     @include xs {
-        min-height: calc(  100vh - (163px + 66.72px ));
+        min-height: calc(  100vh - (163px + 56.73px ));
         justify-content: center;
     }
+   
     h1 {
         font-size: 10rem;
         font-weight: 700;
+        @include xs {
+            font-size: 6rem;
+        }
     }
     h3{
         margin-bottom: 50px;
+        @include xs {
+           font-size:  1rem ;
+        }
+     
     }
     a{
         color: $color-1;

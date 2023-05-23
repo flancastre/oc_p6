@@ -1,6 +1,12 @@
+/* Landscape small devices */
 
+@mixin xxs {
+    @media (max-width: 365px) { 
+        @content;
+    }
 
-/* Landscape phones and down */
+}
+/* Landscape phones */
 
 @mixin xs {
     @media (max-width: 480px) { 

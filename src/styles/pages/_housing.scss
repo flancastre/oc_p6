@@ -3,23 +3,26 @@
 .carrousel-content {
     display: flex;
     justify-content: space-between;
-    margin: 0 10px 0 10px;
+    margin: 0 20px 0 20px;
     @include xs {
         flex-direction: column;
     }
 
     .carrousel-content-left {
-        @include xs {
+     
+        @include sm {
             margin: 0 10px 0 10px;
         }
         h2 {
-            @include xs {
+          
+            @include sm {
                 font-size: 18px;
             }
         }
         p{
             margin-top: 10px;
-            @include xs {
+           
+            @include sm {
                 font-size: 14px;
             }
         }
@@ -28,12 +31,11 @@
             
             
             li {
-                @include xs {
+             
+                @include sm {
                     height: 15px;
-                    font-size:  10px;
-                    padding: 10px;
-                  
-
+                    font-size: 10px;
+                    padding: 7px 15px 7px 15px;
                 }
             }
         }
@@ -45,6 +47,9 @@
             display: flex;
             justify-content: space-between;
             flex-direction: row-reverse;
+        
+        }
+        @include sm {
             margin: 0 10px 0 10px ;
         }
         ul {
@@ -55,8 +60,9 @@
          }
 
             img {
-                @include xs {
-                    height: 13px ;
+              
+                @include sm {
+                    height: 13px;
                     width: 13px;
                 }
             }
@@ -66,7 +72,8 @@
             display: flex;
             align-items: center;
             p {
-                @include xs {
+              
+                @include sm {
                     font-size: 12px;
                 }
             }
@@ -76,7 +83,8 @@
                 width: 60px;
                 margin: 0 0 0 5px;
                 object-fit: cover;
-                @include xs {
+                
+                @include sm {
                     height: 32px;
                     width: 32px;
                 }
