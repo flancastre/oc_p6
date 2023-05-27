@@ -24,7 +24,6 @@ const Housing = () => {
           const myid = filteredData[0].id;
           setFilteredPictures(filteredData[0].pictures);
           setRates(filteredData[0].rating);
-          console.log(filteredData);
           if (myid !== idH) {
             navigate("/error");
           }
