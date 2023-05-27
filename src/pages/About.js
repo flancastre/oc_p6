@@ -3,6 +3,7 @@ import Navigations from "../components/Navigations";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Dropdown from "../components/Dropdown";
+import about from "../assets/img/about.png";
 
 const About = () => {
   const [dataInfo, setDataInfo] = useState([]);
@@ -16,7 +17,7 @@ const About = () => {
   return (
     <div>
       <Navigations />
-      <Banner img="./img/about.png" alt="image d'une montagne" text="" />
+      <Banner img={about} alt="image d'une montagne" text="" />
       <div className="about-container">
         {dataInfo.map((infos, index) => (
           <Dropdown

@@ -1,4 +1,5 @@
-// import '../../style/components/Rating.css'
+import star from "../assets/img/star.png";
+import starVide from "../assets/img/starVide.png";
 
 function Rating({ value }) {
   const range = [1, 2, 3, 4, 5];
@@ -9,14 +10,14 @@ function Rating({ value }) {
         value >= rangeElem ? (
           <img
             key={rangeElem.toString()}
-            src="../img/star.png"
+            src={star}
             alt="star"
             className="star"
           />
         ) : (
           <img
             key={rangeElem.toString()}
-            src="../img/starVide.png"
+            src={starVide}
             alt="star-empty"
             className="star"
           />

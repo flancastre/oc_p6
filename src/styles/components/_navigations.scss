@@ -5,6 +5,9 @@
     @include xs {
       padding: 5px;
     }
+    .logo-link{
+      cursor: default;
+    }
 
     img{
       @include xs {

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import arrowLeft from "../assets/img/arrow-left.png";
+import arrowRight from "../assets/img/arrow-right.png";
 
 const Carrousel = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,13 +24,13 @@ const Carrousel = ({ pictures }) => {
         className={pictures.length > 1 ? "prev-btn" : "btn-none"}
         onClick={previousImage}
       >
-        <img src="../img/arrow-left.png" alt="arrow left" />
+        <img src={arrowLeft} alt="arrow left" />
       </button>
       <button
         className={pictures.length > 1 ? "next-btn" : "btn-none"}
         onClick={nextImage}
       >
-        <img src="../img/arrow-right.png" alt="arrow right" />
+        <img src={arrowRight} alt="arrow right" />
       </button>
 
       {pictures.length > 1 && (

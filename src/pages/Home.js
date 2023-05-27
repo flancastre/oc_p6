@@ -3,6 +3,7 @@ import Navigations from "../components/Navigations";
 import Banner from "../components/Banner";
 import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
+import main from "../assets/img/main.png";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -17,7 +18,7 @@ const Home = () => {
     <div>
       <Navigations />
       <Banner
-        img="./img/main.png"
+        img={main}
         alt="Image d'une falaise"
         text="Chez vous, partout et ailleurs"
       />

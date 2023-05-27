@@ -36,7 +36,7 @@ const Housing = () => {
 
   return (
     <div>
-      <Navigations img={1} />
+      <Navigations />
       <div>
         {data
           .filter((stay) => stay.id === idH)
@@ -66,7 +66,7 @@ const Housing = () => {
             </div>
           ))}
       </div>
-      <Footer img={1} />
+      <Footer />
     </div>
   );
 };

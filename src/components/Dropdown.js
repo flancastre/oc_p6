@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import dropdownOpen from "../assets/img/dropdown-open.png";
+import dropdownClose from "../assets/img/dropdown-close.png";
 
 const Dropdown = ({ title, content, styles }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,17 +24,9 @@ const Dropdown = ({ title, content, styles }) => {
         <h3>{title}</h3>
 
         {isOpen ? (
-          <img
-            src="../img/dropdown-open.png"
-            alt=""
-            onClick={() => dropOpen()}
-          />
+          <img src={dropdownOpen} alt="" onClick={() => dropOpen()} />
         ) : (
-          <img
-            src="../img/dropdown-close.png"
-            alt=""
-            onClick={() => dropClose()}
-          />
+          <img src={dropdownClose} alt="" onClick={() => dropClose()} />
         )}
       </div>
       <div className={isOpen ? "drop-content" : "drop-content-close"}>
