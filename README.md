@@ -1,4 +1,5 @@
-lien netlify : https://kasa-lancastre.netlify.app/
+ code router in App.js
+link netlify : https://kasa-lancastre.netlify.app/
 
 # Getting Started with Create React App
 
